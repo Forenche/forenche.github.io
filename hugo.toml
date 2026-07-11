@@ -100,5 +100,13 @@ theme = "hugo-neso"
     url        = "https://github.com/forenche"  # external link
     weight     = 60
 
+# Params
+[params]
+  [params.neso] #Neso specific params
+    support_theme_author = true
+    display_mode = "profile"
+    ext_link_indicator = true
+    ext_link_new_window = true
+
 [outputs]  # The `outputs` table lives at the top level of TOML
   home = ["html", "rss", "json"]  # Ask Hugo to emit a JSON index
