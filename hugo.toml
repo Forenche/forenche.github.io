@@ -112,4 +112,4 @@ theme = "hugo-neso"
   show_reading_time = true
 
 [outputs]  # The `outputs` table lives at the top level of TOML
-  home = ["html", "rss", "json"]  # Ask Hugo to emit a JSON index
+  home = ["html", "json"]  # Ask Hugo to emit a JSON index
