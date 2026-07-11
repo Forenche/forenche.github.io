@@ -1,6 +1,6 @@
 baseURL = 'https://forenche.github.io/'
 locale = 'en-us'
-title = 'Forenche's Blogs'
+title = "Forenche's Blogs"
 
 # Theme
 theme = "hugo-neso"
