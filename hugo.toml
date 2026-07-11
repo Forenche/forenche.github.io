@@ -5,6 +5,11 @@ title = 'My New Hugo Project'
 # Theme
 theme = "hugo-neso"
 
+# Set image cache dir
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 # Tailwind settings
 [build]
   [build.buildStats]
