@@ -99,3 +99,6 @@ theme = "hugo-neso"
     name       = "GitHub"
     url        = "https://github.com/forenche"  # external link
     weight     = 60
+
+[outputs]  # The `outputs` table lives at the top level of TOML
+  home = ["html", "rss", "json"]  # Ask Hugo to emit a JSON index
