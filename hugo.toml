@@ -84,11 +84,11 @@ theme = "hugo-neso"
     name       = "Categories"
     pageRef    = "/categories"  # your taxonomy: tags, categories, etc.
     weight     = 30
-  [[menus.main]]
-    identifier = "archives"
-    name       = "Archives"
-    pageRef    = "/archives"  # archives page
-    weight     = 40
+  # [[menus.main]]
+  #   identifier = "archives"
+  #   name       = "Archives"
+  #   pageRef    = "/archives"  # archives page
+  #   weight     = 40
   [[menus.main]]
     identifier = "search"
     name       = "Search"
