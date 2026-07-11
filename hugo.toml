@@ -108,5 +108,8 @@ theme = "hugo-neso"
     ext_link_indicator = true
     ext_link_new_window = true
 
+  [params.neso.page]
+  show_reading_time = true
+
 [outputs]  # The `outputs` table lives at the top level of TOML
   home = ["html", "rss", "json"]  # Ask Hugo to emit a JSON index
