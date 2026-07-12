@@ -109,20 +109,20 @@ theme = "hugo-neso"
     ext_link_new_window = true
 
   [params.neso.page]
-  show_reading_time = true
+    show_reading_time = true
 
   [params.neso.home.profile]
-  avatar_image = "img/crying_cat.jpg"
-  avatar_image_alt_text = "cat"
-  avatar_image_size = 160
-  avatar_image_size_sm = 120
+    avatar_image = "img/crying_cat.jpg"
+    avatar_image_alt_text = "cat"
+    avatar_image_size = 160
+    avatar_image_size_sm = 120
 
   [[params.neso.home.profile.link_btns]]
     label = "Source Code"
     url   = "https://github.com/Forenche/forenche.github.io"
 
   [params.neso.home.list]
-  featured_entries_limit = 5
+    featured_entries_limit = 5
 
   [params.neso.social]
     [[params.neso.social.links]]
@@ -132,6 +132,10 @@ theme = "hugo-neso"
     [[params.neso.social.links]]
       name = "email"
       url  = "forenche123@gmail.com"
+
+    [[params.neso.social.links]]
+      name  = "Telegram"
+      url   = "https://t.me/GigaChadCat"
 
 [outputs]  # The `outputs` table lives at the top level of TOML
   home = ["html", "json"]  # Ask Hugo to emit a JSON index
