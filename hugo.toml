@@ -110,6 +110,7 @@ theme = "hugo-neso"
 
   [params.neso.page]
     show_reading_time = true
+    enable_comments = true
 
   [params.neso.home.profile]
     avatar_image = "img/crying_cat.jpg"
