@@ -1,19 +1,51 @@
 {{- /* Pick a commenting system provider and add your code below. */}}
 {{- /* Ref. https://gohugo.io/content-management/comments/ */}}
 
-<script src="https://giscus.app/client.js"
-        data-repo="Forenche/hugo_comments"
-        data-repo-id="R_kgDOTWLT2A"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOTWLT2M4DBCfC"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
+{{- if site.Params.neso.page.enable_comments }}
+<div id="giscus-container"></div>
+<script>
+  (() => {
+    'use strict';
+
+    const giscusTheme = () =>
+      document.documentElement.getAttribute('data-color-scheme') === 'dark'
+        ? 'dark' : 'light';
+
+    const s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.setAttribute('data-repo', 'Forenche/hugo_comments');
+    s.setAttribute('data-repo-id', 'R_kgDOTWLT2A');
+    s.setAttribute('data-category', 'Announcements');
+    s.setAttribute('data-category-id', 'DIC_kwDOTWLT2M4DBCfC');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'top');
+    s.setAttribute('data-theme', giscusTheme());
+    s.setAttribute('data-lang', 'en');
+    s.setAttribute('data-loading', 'lazy');
+    s.crossOrigin = 'anonymous';
+    s.async = true;
+    document.getElementById('giscus-container').appendChild(s);
+
+    const pushTheme = () => {
+      const frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) return;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: giscusTheme() } } },
+        'https://giscus.app'
+      );
+    };
+
+    new MutationObserver(pushTheme).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-color-scheme']
+    });
+
+    window.addEventListener('message', (e) => {
+      if (e.origin === 'https://giscus.app' && e.data?.giscus) pushTheme();
+    });
+  })();
 </script>
+{{- end }}
