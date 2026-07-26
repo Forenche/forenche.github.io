@@ -131,8 +131,8 @@ theme = "hugo-neso"
       url  = "https://github.com/forenche"
 
     [[params.neso.social.links]]
-      name = "email"
-      url  = "forenche123@gmail.com"
+      name = "Email"
+      url  = "mailto:forenche123@gmail.com"
 
     [[params.neso.social.links]]
       name  = "Telegram"
