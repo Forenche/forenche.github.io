@@ -14,6 +14,9 @@ theme = "hugo-neso"
 # Build
 # --------------------------------
 
+[security.exec]
+  allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
 [minify]
   # Recommended: minify the generated output to improve page load time
   minifyOutput = true
