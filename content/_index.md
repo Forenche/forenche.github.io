@@ -1,4 +1,4 @@
 ---
 title       : "forenche"
-description : "Skillfully unskilled."
+description : "Unskillfully skilled."
 ---
